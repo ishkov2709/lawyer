@@ -1,9 +1,9 @@
-import css from "./Icon.module.css";
+import css from './Icon.module.css';
 
-const Icon = ({ name, width, height }) => {
+const Icon = ({ path, width, height }) => {
   return (
     <svg width={width} height={height}>
-      <use href="name"></use>
+      <use href={path}></use>
     </svg>
   );
 };

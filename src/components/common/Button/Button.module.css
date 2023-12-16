@@ -1,0 +1,12 @@
+.button {
+  display: block;
+
+  margin: 0 auto;
+  padding: 11px 0;
+
+  background-color: var(--primary-beige);
+
+  font-size: 12px;
+
+  border-radius: 8px;
+}

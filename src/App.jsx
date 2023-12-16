@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import SharedLayout from './components/SharedLayout';
-import HomePage from './pages/HomePage/';
-import NotFoundPage from './pages/NotFoundPage/';
+import NotFoundPage from './pages/NotFoundPage';
+import HomePage from './pages/HomePage';
 
 const App = () => {
   return (

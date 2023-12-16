@@ -1,0 +1,81 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 9px 0 8px 0;
+
+  background: var(--primary-black-transparent);
+  color: var(--primary-white);
+}
+
+.logo {
+}
+
+.logoText {
+  width: 54px;
+
+  padding: 6px 0;
+
+  font-size: 10px;
+  text-align: center;
+
+  border-top: 1px solid var(--primary-white);
+  border-bottom: 1px solid var(--primary-white);
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+
+  font-style: normal;
+}
+
+.phone {
+  font-size: 12px;
+
+  transition: color 250ms ease-in-out;
+}
+
+.phone:hover,
+.phone:focus {
+  color: var(--primary-brown);
+}
+
+.connectList {
+  display: flex;
+  gap: 10px;
+}
+
+.connectItem {
+}
+
+.connectLink {
+  position: relative;
+  display: block;
+
+  transition: opacity 2500ms ease-in-out;
+  transition: visibility 2500ms ease-in-out;
+}
+
+.connectLink::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: #0000001a;
+  border-radius: 50%;
+  opacity: 1;
+  pointer-events: none;
+
+  transition: opacity 250ms ease-in-out;
+}
+
+.connectLink:hover::after,
+.connectLink:focus::after {
+  opacity: 0;
+}
