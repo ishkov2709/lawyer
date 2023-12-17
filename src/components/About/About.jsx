@@ -9,7 +9,7 @@ const About = () => {
         <h2 className={css.title}>Нечай Олександр</h2>
         <QRCode
           className={css.qrCode}
-          size={188}
+          size="100%"
           value="https://erau.unba.org.ua/profile/81570"
         />
         <a

@@ -2,6 +2,12 @@
   padding-top: 40px;
 }
 
+@media screen and (min-width: 768px) {
+  .section {
+    padding-top: 60px;
+  }
+}
+
 .title {
   margin-bottom: 14px;
 
@@ -10,23 +16,52 @@
   text-align: center;
 }
 
+@media screen and (min-width: 768px) {
+  .title {
+    margin-bottom: 40px;
+
+    font-size: 32px;
+  }
+}
+
 .qrCode {
   display: block;
 
+  width: 188px;
+
   margin: 0 auto 8px auto;
+}
+
+@media screen and (min-width: 768px) {
+  .qrCode {
+    width: 306px;
+
+    margin: 0 auto 20px auto;
+  }
 }
 
 .linkReg {
   display: block;
 
-  margin-bottom: 20px;
+  margin: 0 auto 20px auto;
 
   color: var(--primary-brown);
 
+  font-size: 14px;
   text-align: center;
   text-decoration: underline;
 
   transition: color 150ms ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  .linkReg {
+    width: 406px;
+
+    margin: 0 auto 40px auto;
+
+    font-size: 16px;
+  }
 }
 
 .linkReg:hover,
@@ -44,9 +79,21 @@
   list-style: disc;
 }
 
+@media screen and (min-width: 768px) {
+  .featureList {
+    gap: 32px;
+  }
+}
+
 .featureItem {
 }
 
 .featureText {
   font-size: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .featureText {
+    font-size: 14px;
+  }
 }

@@ -6,14 +6,12 @@ const Button = ({
   title,
   type = 'button',
   action,
-  width = '100%',
   disabled = false,
 }) => {
   if (!link)
     return (
       <button
         type={type}
-        style={{ width: width }}
         className={css.button}
         onClick={action}
         disabled={disabled}
@@ -23,7 +21,7 @@ const Button = ({
     );
   if (link)
     return (
-      <a href={href} className={css.button} style={{ width: width }}>
+      <a href={href} className={css.button}>
         {title}
       </a>
     );

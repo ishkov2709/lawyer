@@ -2,12 +2,26 @@
   padding: 40px 0 80px 0;
 }
 
+@media screen and (min-width: 768px) {
+  .section {
+    padding: 60px 0 100px 0;
+  }
+}
+
 .title {
   margin-bottom: 14px;
 
   font-size: 24px;
   font-weight: 400;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    margin-bottom: 34px;
+
+    font-size: 48px;
+  }
 }
 
 .address {
@@ -22,6 +36,13 @@
   margin: 0 auto;
 }
 
+@media screen and (min-width: 768px) {
+  .contactList {
+    flex-wrap: nowrap;
+    column-gap: 12px;
+  }
+}
+
 .contactItem {
   display: flex;
   flex-direction: column;
@@ -33,6 +54,12 @@
   padding: 27px 15px;
 }
 
+@media screen and (min-width: 768px) {
+  .contactItem {
+    width: 169px;
+  }
+}
+
 .subtitle {
   margin: 10px 0 24px 0;
 
@@ -42,4 +69,10 @@
 
 .contactValue {
   font-size: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .contactValue {
+    font-size: 16px;
+  }
 }

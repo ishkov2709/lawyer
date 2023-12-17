@@ -1,40 +1,43 @@
-import { useCallback, useEffect, useState } from 'react';
-import SocialList from '../SocialList/SocialList';
-import Container from '../common/Container';
 import css from './Header.module.css';
 import clsx from 'clsx';
+import Container from '../common/Container';
+import classNames from 'classnames';
+import SocialList from '../SocialList/SocialList';
+import { useEffect, useState } from 'react';
+
 const Header = () => {
   const [scrollDirection, setScrollDirection] = useState(null);
   const [prevScrollY, setPrevScrollY] = useState(0);
-
-  const handleScroll = useCallback(() => {
-    const currentScrollY = window.scrollY;
-
-    if (currentScrollY > prevScrollY) {
-      setScrollDirection('down');
-    }
-
-    if (currentScrollY < prevScrollY) {
-      setScrollDirection('up');
-    }
-
-    setPrevScrollY(currentScrollY);
-  }, [prevScrollY]);
+  const [scrollStatus, setScrollStatus] = useState(false);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    if (scrollStatus) {
+      const currentScrollY = window.scrollY;
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [prevScrollY, handleScroll]);
+      if (currentScrollY > prevScrollY) {
+        setScrollDirection('down');
+      }
+
+      if (currentScrollY < prevScrollY) {
+        setScrollDirection('up');
+      }
+
+      setPrevScrollY(currentScrollY);
+      setScrollStatus(false);
+    }
+  }, [scrollStatus, prevScrollY]);
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      setScrollStatus(true);
+    });
+  }, []);
 
   return (
     <header
-      className={clsx(
-        scrollDirection === 'up' || prevScrollY === 0
-          ? css.header
-          : css.hiddenHeader
+      className={classNames(
+        clsx(scrollDirection !== 'up' && prevScrollY > 300 && css.hidden),
+        css.header
       )}
     >
       <Container variant="header">
