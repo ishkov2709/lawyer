@@ -1,11 +1,36 @@
 .section {
-  background-image: linear-gradient(0deg, var(--primary-bg), var(--primary-bg)),
-    url('../../images/bg/img_bg_mob_1x.jpg');
-
+  background-color: var(--primary-black-transparent);
   width: 100vw;
   padding: 144px 0 60px 0;
 
   color: var(--primary-white);
+}
+
+@media screen and (max-width: 767px) {
+  .section {
+    background-image: linear-gradient(
+        0deg,
+        var(--primary-bg),
+        var(--primary-bg)
+      ),
+      url('../../images/bg/img_bg_mob_1x.jpg');
+    background-position: center center;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .section {
+    background-image: linear-gradient(
+        0deg,
+        var(--primary-bg),
+        var(--primary-bg)
+      ),
+      url('../../images/bg/img_bg_mob_2x.jpg');
+  }
 }
 
 .title {

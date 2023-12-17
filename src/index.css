@@ -5,6 +5,7 @@
   --primary-white: #ffffff;
   --primary-beige: #ffeab6;
   --primary-brown: #624600;
+  --accent-brown: #eeaf10;
   --primary-black-transparent: #00000033;
   --primary-bg: rgba(0, 0, 0, 0.6);
 }
@@ -13,6 +14,10 @@ body {
   font-family: 'Lora', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+section {
+  min-width: 375px;
 }
 
 * {

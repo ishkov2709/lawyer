@@ -1,0 +1,17 @@
+.serviceItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+
+  width: 163px;
+}
+
+.serviceImg {
+}
+
+.serviceText {
+  font-size: 14px;
+  text-align: center;
+}
