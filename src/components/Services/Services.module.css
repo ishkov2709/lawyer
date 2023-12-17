@@ -8,6 +8,12 @@
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .section {
+    padding: 80px 0;
+  }
+}
+
 .title {
   margin-bottom: 14px;
 
@@ -30,6 +36,12 @@
 }
 
 @media screen and (min-width: 768px) {
+  .serviceList {
+    column-gap: 0px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
   .serviceList {
     column-gap: 0px;
   }

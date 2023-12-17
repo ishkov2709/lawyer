@@ -1,37 +1,23 @@
 .footer {
-  padding-bottom: 14px;
+  padding-bottom: 50px;
 
   color: var(--primary-gray);
 }
 
-@media screen and (min-width: 768px) {
-  .footer {
-    padding-bottom: 38px;
-  }
-}
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
 
-.title {
   margin-bottom: 8px;
 
   font-size: 15px;
 }
 
 @media screen and (min-width: 768px) {
-  .title {
-    font-size: 20px;
-  }
-}
-
-.subtitle {
-  margin-bottom: 14px;
-
-  font-size: 15px;
-}
-
-@media screen and (min-width: 768px) {
-  .subtitle {
-    margin-bottom: 6px;
-
+  .infoBox {
     font-size: 20px;
   }
 }

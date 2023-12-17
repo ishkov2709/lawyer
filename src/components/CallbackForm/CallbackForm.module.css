@@ -10,11 +10,11 @@
 @media screen and (max-width: 767px) {
   .section {
     background-image: linear-gradient(
-      0deg,
-      var(--secondary-black-transparent),
-      var(--secondary-black-transparent),
-      url('../../images/form/img_form_mob_1x.jpg')
-    );
+        0deg,
+        var(--secondary-black-transparent),
+        var(--secondary-black-transparent)
+      ),
+      url('../../images/form/img_form_mob_1x.jpg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -45,11 +45,11 @@
     padding: 60px 0;
 
     background-image: linear-gradient(
-      0deg,
-      var(--secondary-black-transparent),
-      var(--secondary-black-transparent),
-      url('../../images/form/img_form_tab_1x.jpg')
-    );
+        0deg,
+        var(--secondary-black-transparent),
+        var(--secondary-black-transparent)
+      ),
+      url('../../images/form/img_form_tab_1x.jpg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -67,6 +67,41 @@
         var(--secondary-black-transparent)
       ),
       url('../../images/form/img_form_tab_2x.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section {
+    height: 822px;
+
+    padding: 80px 0px;
+
+    background-image: linear-gradient(
+        0deg,
+        var(--secondary-black-transparent),
+        var(--secondary-black-transparent)
+      ),
+      url('../../images/form/img_form_desktop_1x.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .section {
+    background-image: linear-gradient(
+        0deg,
+        var(--secondary-black-transparent),
+        var(--secondary-black-transparent)
+      ),
+      url('../../images/form/img_form_desktop_2x.jpg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -103,6 +138,12 @@
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .subtitle {
+    margin-bottom: 44px;
+  }
+}
+
 .form {
   width: 286px;
 
@@ -118,7 +159,13 @@
 .formField {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .formField {
+    gap: 8px;
+  }
 }
 
 .formField:not(:last-of-type) {
@@ -157,7 +204,6 @@
   }
 }
 
-.input:hover,
 .input:focus {
   outline: none;
 
@@ -176,7 +222,6 @@
   border: 1px solid var(--error-color);
 }
 
-.error:hover,
 .error:focus {
   border: 1px solid var(--error-color);
 }

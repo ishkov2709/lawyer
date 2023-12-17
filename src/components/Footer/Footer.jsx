@@ -6,8 +6,12 @@ const Footer = () => {
   return (
     <footer className={css.footer}>
       <Container variant="footer">
-        <p className={css.title}>Адвокат</p>
-        <p className={css.subtitle}>Олександр Нечай</p>
+        <div className={css.infoBox}>
+          <p>Адвокат</p>
+          <p>«Олександр Нечай»</p>
+          <p>Всі права захищені</p>
+          <p>&#169;2023</p>
+        </div>
         <SocialList />
       </Container>
     </footer>

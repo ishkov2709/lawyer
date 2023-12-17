@@ -8,6 +8,21 @@
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .section {
+    padding-top: 80px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .aboutWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+  }
+}
+
 .title {
   margin-bottom: 14px;
 
@@ -24,10 +39,17 @@
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .title {
+    margin-bottom: 44px;
+  }
+}
+
 .qrCode {
   display: block;
 
   width: 188px;
+  height: 188px;
 
   margin: 0 auto 8px auto;
 }
@@ -35,8 +57,18 @@
 @media screen and (min-width: 768px) {
   .qrCode {
     width: 306px;
+    height: 306px;
 
     margin: 0 auto 20px auto;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .qrCode {
+    width: 386px;
+    height: 386px;
+
+    margin: 0 auto 12px auto;
   }
 }
 
@@ -61,6 +93,12 @@
     margin: 0 auto 40px auto;
 
     font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .linkReg {
+    margin: 0 auto;
   }
 }
 

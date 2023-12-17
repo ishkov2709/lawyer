@@ -62,6 +62,35 @@
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .section {
+    padding: 160px 0 80px 0;
+
+    background-image: linear-gradient(
+        0deg,
+        var(--primary-bg),
+        var(--primary-bg)
+      ),
+      url('../../images/bg/img_bg_desktop_1x.jpg');
+    background-position: center center;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .section {
+    background-image: linear-gradient(
+        0deg,
+        var(--primary-bg),
+        var(--primary-bg)
+      ),
+      url('../../images/bg/img_bg_desktop_2x.jpg');
+  }
+}
+
 .title {
   margin-bottom: 8px;
 
