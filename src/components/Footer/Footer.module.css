@@ -1,0 +1,17 @@
+.footer {
+  padding-bottom: 14px;
+
+  color: var(--primary-gray);
+}
+
+.title {
+  margin-bottom: 8px;
+
+  font-size: 15px;
+}
+
+.subtitle {
+  margin-bottom: 14px;
+
+  font-size: 15px;
+}

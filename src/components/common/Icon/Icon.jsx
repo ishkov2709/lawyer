@@ -1,9 +1,15 @@
-import css from './Icon.module.css';
+import sprites from '../../../images/sprites.svg';
 
-const Icon = ({ path, width, height }) => {
+const Icon = ({
+  name,
+  width,
+  height,
+  stroke = '#000000',
+  fill = '#000000',
+}) => {
   return (
-    <svg width={width} height={height}>
-      <use href={path}></use>
+    <svg width={width} height={height} stroke={stroke} fill={fill}>
+      <use href={`${sprites}#${name}`}></use>
     </svg>
   );
 };

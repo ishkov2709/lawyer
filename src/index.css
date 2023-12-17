@@ -5,10 +5,11 @@
   --primary-white: #ffffff;
   --primary-beige: #ffeab6;
   --primary-brown: #624600;
-  --accent-brown: #eeaf10;
-  --primary-black-transparent: #00000033;
+  --primary-gray: #3a3a3a;
   --primary-bg: rgba(0, 0, 0, 0.6);
+  --primary-black-transparent: #00000033;
   --secondary-black-transparent: #000000b3;
+  --accent-brown: #eeaf10;
   --error-color: #f52626;
 }
 

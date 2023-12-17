@@ -1,6 +1,21 @@
+.hiddenHeader {
+  position: fixed;
+  top: -100%;
+  left: 0;
+
+  width: 100vw;
+
+  padding: 9px 0 8px 0;
+
+  background: var(--primary-black-transparent);
+  color: var(--primary-white);
+
+  transition: top 2000ms linear;
+}
+
 .header {
   position: fixed;
-  top: 0;
+  top: 0%;
   left: 0;
 
   min-width: 375px;
@@ -10,9 +25,8 @@
 
   background: var(--primary-black-transparent);
   color: var(--primary-white);
-}
 
-.logo {
+  transition: top 2000ms linear;
 }
 
 .logoText {
@@ -27,13 +41,11 @@
   border-bottom: 1px solid var(--primary-white);
 }
 
-.address {
+.connectWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 6px;
-
-  font-style: normal;
 }
 
 .phone {
@@ -45,41 +57,4 @@
 .phone:hover,
 .phone:focus {
   color: var(--primary-brown);
-}
-
-.connectList {
-  display: flex;
-  gap: 10px;
-}
-
-.connectItem {
-}
-
-.connectLink {
-  position: relative;
-  display: block;
-
-  transition: opacity 2500ms ease-in-out;
-  transition: visibility 2500ms ease-in-out;
-}
-
-.connectLink::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 24px;
-  height: 24px;
-  background: #0000001a;
-  border-radius: 50%;
-  opacity: 1;
-  pointer-events: none;
-
-  transition: opacity 250ms ease-in-out;
-}
-
-.connectLink:hover::after,
-.connectLink:focus::after {
-  opacity: 0;
 }

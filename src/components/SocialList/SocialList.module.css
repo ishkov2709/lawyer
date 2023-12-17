@@ -1,0 +1,36 @@
+.socialList {
+  display: flex;
+  gap: 10px;
+}
+
+.socialItem {
+}
+
+.socialLink {
+  position: relative;
+  display: block;
+
+  transition: opacity 2500ms ease-in-out;
+  transition: visibility 2500ms ease-in-out;
+}
+
+.socialLink::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: #0000001a;
+  border-radius: 50%;
+  opacity: 1;
+  pointer-events: none;
+
+  transition: opacity 250ms ease-in-out;
+}
+
+.socialLink:hover::after,
+.socialLink:focus::after {
+  opacity: 0;
+}

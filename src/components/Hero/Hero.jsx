@@ -4,7 +4,7 @@ import css from './Hero.module.css';
 
 const Hero = () => {
   return (
-    <section className={css.section}>
+    <section className={css.section} id="hero">
       <Container>
         <h1 className={css.title}>Адвокат</h1>
         <span className={css.separator}></span>

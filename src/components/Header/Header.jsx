@@ -1,49 +1,52 @@
-import { connection } from '../../images/connection/connection';
+import { useCallback, useEffect, useState } from 'react';
+import SocialList from '../SocialList/SocialList';
 import Container from '../common/Container';
 import css from './Header.module.css';
+import clsx from 'clsx';
 const Header = () => {
+  const [scrollDirection, setScrollDirection] = useState(null);
+  const [prevScrollY, setPrevScrollY] = useState(0);
+
+  const handleScroll = useCallback(() => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > prevScrollY) {
+      setScrollDirection('down');
+    }
+
+    if (currentScrollY < prevScrollY) {
+      setScrollDirection('up');
+    }
+
+    setPrevScrollY(currentScrollY);
+  }, [prevScrollY]);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [prevScrollY, handleScroll]);
+
   return (
-    <header className={css.header}>
+    <header
+      className={clsx(
+        scrollDirection === 'up' || prevScrollY === 0
+          ? css.header
+          : css.hiddenHeader
+      )}
+    >
       <Container variant="header">
-        <a href="#0">
+        <a href="#hero">
           <p className={css.logoText}>Олександр Нечай</p>
         </a>
-        <address className={css.address}>
+        <div className={css.connectWrapper}>
           <a href="tel:+380669216883" className={css.phone}>
             +38 066 921 68 83
           </a>
-          <ul className={css.connectList}>
-            <li>
-              <a
-                className={css.connectLink}
-                href="https://t.me/AleksandrNechay"
-                title="Telegram"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img src={connection.telegram} alt="Telegram" width={24} />
-              </a>
-            </li>
-
-            <li>
-              <a
-                className={css.connectLink}
-                href="viber://chat?number=380669216883"
-                title="Viber"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img src={connection.viber} alt="Viber" width={24} />
-              </a>
-            </li>
-
-            <li>
-              <a className={css.connectLink} href="#WhatsApp" title="WhatsApp">
-                <img src={connection.whatsapp} alt="WhatsApp" width={24} />
-              </a>
-            </li>
-          </ul>
-        </address>
+          <SocialList />
+        </div>
       </Container>
     </header>
   );
