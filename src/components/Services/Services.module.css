@@ -40,9 +40,3 @@
     column-gap: 0px;
   }
 }
-
-@media screen and (min-width: 1280px) {
-  .serviceList {
-    column-gap: 0px;
-  }
-}
