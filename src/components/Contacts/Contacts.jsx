@@ -22,7 +22,7 @@ const Contacts = () => {
             <li className={css.contactItem}>
               <Icon name="mail" width={60} height={60} fill="#ffffff" />
               <h3 className={css.subtitle}>E-mail</h3>
-              <p className={css.contactValue}>parampampam@gmail.com</p>
+              <p className={css.contactValue}>aleksandrnechay29@gmail.com</p>
             </li>
           </ul>
         </address>
