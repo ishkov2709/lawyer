@@ -1,6 +1,5 @@
 .section {
   background-color: var(--primary-black-transparent);
-  width: 100vw;
   padding: 144px 0 60px 0;
 
   color: var(--primary-white);

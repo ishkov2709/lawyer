@@ -8,6 +8,12 @@
   --accent-brown: #eeaf10;
   --primary-black-transparent: #00000033;
   --primary-bg: rgba(0, 0, 0, 0.6);
+  --secondary-black-transparent: #000000b3;
+  --error-color: #f52626;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

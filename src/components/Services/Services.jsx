@@ -9,8 +9,8 @@ const Services = () => {
       <Container>
         <h2 className={css.title}>Послуги</h2>
         <ul className={css.serviceList}>
-          {servicesImg.map(({ url, description }) => (
-            <ServiceItem url={url} description={description} />
+          {servicesImg.map(({ url, description }, i) => (
+            <ServiceItem key={i} url={url} description={description} />
           ))}
         </ul>
       </Container>

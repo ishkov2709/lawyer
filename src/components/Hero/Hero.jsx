@@ -9,7 +9,12 @@ const Hero = () => {
         <h1 className={css.title}>Адвокат</h1>
         <span className={css.separator}></span>
         <p className={css.fullName}>Нечай Олександр Дмитрович</p>
-        <Button title="ОТРИМАТИ КОНСУЛЬТАЦІЮ" width="286px" />
+        <Button
+          link={true}
+          href="#form"
+          title="ОТРИМАТИ КОНСУЛЬТАЦІЮ"
+          width="286px"
+        />
       </Container>
     </section>
   );

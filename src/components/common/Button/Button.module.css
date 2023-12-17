@@ -1,12 +1,23 @@
 .button {
   display: block;
 
+  height: 37px;
+
   margin: 0 auto;
   padding: 11px 0;
 
   background-color: var(--primary-beige);
+  color: var(--primary-black);
 
   font-size: 12px;
+  text-align: center;
 
   border-radius: 8px;
+
+  transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+}
+
+.button:disabled {
+  background-color: var(--secondary-black-transparent);
+  color: var(--primary-white);
 }
