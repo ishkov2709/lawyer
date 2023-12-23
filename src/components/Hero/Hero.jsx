@@ -11,7 +11,11 @@ const Hero = () => {
         <p className={css.fullName}>Нечай Олександр Дмитрович</p>
         <p className={css.city}>м. Миколаїв</p>
         <div className={css.buttonContainer}>
-          <Button link={true} href="#form" title="ОТРИМАТИ КОНСУЛЬТАЦІЮ" />
+          <Button
+            link={true}
+            href="#form"
+            title="ОТРИМАТИ БЕЗКОШТОВНУ КОНСУЛЬТАЦІЮ"
+          />
         </div>
       </Container>
     </section>
