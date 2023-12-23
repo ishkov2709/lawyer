@@ -18,6 +18,12 @@
   transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
 }
 
+.button:hover,
+.button:focus {
+  background-color: var(--primary-brown);
+  color: var(--primary-white);
+}
+
 @media screen and (min-width: 768px) {
   .button {
     display: block;

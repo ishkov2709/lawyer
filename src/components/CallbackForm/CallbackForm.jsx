@@ -6,10 +6,14 @@ import classNames from 'classnames';
 import { Formik } from 'formik';
 import { initialValues } from './initialValues';
 import { callbackFormShema } from '../../schemas/callbackFormShema';
+import { useDispatch } from 'react-redux';
+import { sendContacts } from '../../store/thunk';
 
 const CallbackForm = () => {
+  const dispatch = useDispatch();
   const handleSubmitForm = (values, { resetForm }) => {
     console.log(values);
+    dispatch(sendContacts(values));
     resetForm();
   };
 
@@ -25,22 +29,19 @@ const CallbackForm = () => {
           onSubmit={handleSubmitForm}
           validationSchema={callbackFormShema}
         >
-          {({ values, errors, touched, handleChange, handleSubmit }) => (
+          {({ values, errors, handleChange, handleSubmit }) => (
             <form className={css.form} onSubmit={handleSubmit}>
               <label className={css.formField}>
                 <span className={css.label}>Як вас звати?</span>
                 <input
                   name="fullName"
                   type="text"
-                  className={clsx(
-                    css.input,
-                    errors.fullName && values.fullName && css.error
-                  )}
+                  className={clsx(css.input, errors.fullName && css.error)}
                   placeholder="Іванов Іван Іванович"
                   onChange={handleChange}
                   value={values.fullName}
                 />
-                {errors.fullName && values.fullName && (
+                {errors.fullName && (
                   <span className={css.errorText}>
                     Некорректно введене значення
                   </span>
@@ -49,18 +50,15 @@ const CallbackForm = () => {
               <label className={css.formField}>
                 <span className={css.label}>Телефон</span>
                 <input
-                  name="phone"
-                  type="number"
-                  className={clsx(
-                    css.input,
-                    errors.phone && values.phone && css.error
-                  )}
+                  name="number"
+                  type="text"
+                  className={clsx(css.input, errors.number && css.error)}
                   placeholder="380"
                   onChange={handleChange}
-                  value={values.phone}
+                  value={values.number}
                 />
 
-                {errors.phone && values.phone && (
+                {errors.number && (
                   <span className={css.errorText}>
                     Некорректно введене значення
                   </span>
@@ -80,7 +78,7 @@ const CallbackForm = () => {
               <Button
                 title="ВІДПРАВИТИ"
                 type="submit"
-                disabled={Boolean(errors.fullName || errors.phone)}
+                disabled={Boolean(errors.fullName || errors.number)}
               />
             </form>
           )}

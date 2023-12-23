@@ -11,7 +11,6 @@ const About = () => {
           <div className={css.regWrapper}>
             <QRCode
               className={css.qrCode}
-              size="100%"
               value="https://erau.unba.org.ua/profile/81570"
             />
             <a
