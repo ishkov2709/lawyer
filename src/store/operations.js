@@ -1,7 +1,7 @@
 export const sendContactsPending = state => {
   state.isLoading = true;
   state.error = null;
-  state.succes = null;
+  state.success = null;
 };
 
 export const sendContactsFulfilled = state => {
@@ -12,5 +12,5 @@ export const sendContactsFulfilled = state => {
 export const sendContactsRejected = (state, { payload }) => {
   state.isLoading = false;
   state.error = payload;
-  state.succes = false;
+  state.success = false;
 };

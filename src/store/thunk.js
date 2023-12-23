@@ -2,15 +2,16 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://alexlawyer.onrender.com/api/customers';
+axios.defaults.baseURL = 'https://alexlawyer.onrender.com/api';
 
 export const sendContacts = createAsyncThunk(
   'contacts/send',
-  async (data, thankAPI) => {
+  async (data, thunkAPI) => {
     try {
-      await axios.post('/', data);
+      const res = await axios.post('/', data);
+      if (res?.status !== 200) throw new Error('Error');
     } catch (error) {
-      thankAPI.rejectWithValue(error);
+      return thunkAPI.rejectWithValue(error);
     }
   }
 );

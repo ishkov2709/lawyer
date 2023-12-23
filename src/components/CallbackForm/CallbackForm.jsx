@@ -12,7 +12,6 @@ import { sendContacts } from '../../store/thunk';
 const CallbackForm = () => {
   const dispatch = useDispatch();
   const handleSubmitForm = (values, { resetForm }) => {
-    console.log(values);
     dispatch(sendContacts(values));
     resetForm();
   };

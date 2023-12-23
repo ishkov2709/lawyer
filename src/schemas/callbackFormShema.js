@@ -4,6 +4,6 @@ const latinCyrillicPattern = /^(?! )[A-Za-z\u00C0-\u024F\u0400-\u04FF ]+(?! )$/;
 const phoneNumberPattern = /^\d{1,4}\s?\d{1,4}\s?\d{1,9}$/;
 
 export const callbackFormShema = object().shape({
-  fullName: string().required().matches(latinCyrillicPattern),
+  fullName: string().required().min(2).matches(latinCyrillicPattern),
   number: string().required().min(10).matches(phoneNumberPattern),
 });

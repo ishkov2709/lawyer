@@ -10,7 +10,13 @@ import {
 const customerSlice = createSlice({
   name: 'customer',
   initialState: initialState,
-  reducers: {},
+  reducers: {
+    reset: state => {
+      state.isLoading = false;
+      state.error = null;
+      state.success = null;
+    },
+  },
   extraReducers: builder =>
     builder
       .addCase(sendContacts.pending, sendContactsPending)
@@ -19,3 +25,5 @@ const customerSlice = createSlice({
 });
 
 export const customerReducer = customerSlice.reducer;
+
+export const { reset } = customerSlice.actions;
